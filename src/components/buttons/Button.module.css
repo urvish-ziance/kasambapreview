@@ -1,0 +1,46 @@
+.button {
+  width: 8em;
+  height: 3em;
+  font-size: 1em;
+  border-radius: 0.5em;
+}
+
+.solid {
+  color: var(--primaryTextColor1);
+  border: none;
+
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+
+  background-image: linear-gradient(0deg, var(--secondaryBgColor1) , var(--secondaryBgColor2));
+}
+.solid::before {
+    content: "";
+    position: absolute;
+    left: 0.3em;
+    right: 0;
+    bottom: -1.85em;
+    width: 7.5em;
+    background: url("../../assets/images/buttonDecor.png") 50% no-repeat;
+    background-size: contain;
+    opacity: 0.8;
+    z-index: 3;
+    height: 4em;
+    background-clip: content-box;
+}
+
+.solid:hover {
+  box-shadow: 0 0 1em var(--secondaryBgColor2);
+  text-shadow: 0 0 0.1em white;
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.outline:hover {
+    text-shadow: 0 0 0.1em white;
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.2);
+}
